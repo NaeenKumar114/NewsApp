@@ -75,7 +75,17 @@ class ViewController: UIViewController {
             task.resume()
         }
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueIdentifiers.mainViewToDetailArticleView
+        {
+            let destinationVC = segue.destination as! DetailedArticleViewController
+            let row = sender as! Int
+            if let articleUrl = techCrunchNewsData?.articles?[row].url
+            {
+                destinationVC.articleUrl = articleUrl
+            }
+        }
+    }
 }
 
 
@@ -111,7 +121,10 @@ extension ViewController: UITableViewDelegate , UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return techCrunchNewsData?.articles?.count ?? 0
     }
-  
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: segueIdentifiers.mainViewToDetailArticleView, sender: indexPath.row)
+        newsTableView.deselectRow(at: indexPath, animated: true)
+    }
 
 }
 

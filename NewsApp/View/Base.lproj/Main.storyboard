@@ -45,11 +45,59 @@
                     <navigationItem key="navigationItem" title="News" id="Ox1-AK-Kle"/>
                     <connections>
                         <outlet property="newsTableView" destination="mtK-vV-dm0" id="OdU-pU-hE2"/>
+                        <segue destination="o4I-RD-5Gs" kind="show" identifier="mainToDetailArticleView" id="9xm-qJ-6Qx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="955.07246376811599" y="55.580357142857139"/>
+        </scene>
+        <!--Detailed Article View Controller-->
+        <scene sceneID="Nxf-pv-3qF">
+            <objects>
+                <viewController id="o4I-RD-5Gs" customClass="DetailedArticleViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LfZ-px-KEX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zvp-FS-lgq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYP-CG-W3X">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="UYP-CG-W3X" firstAttribute="top" secondItem="Zvp-FS-lgq" secondAttribute="top" id="4Ef-00-0Ew"/>
+                                    <constraint firstItem="UYP-CG-W3X" firstAttribute="leading" secondItem="Zvp-FS-lgq" secondAttribute="leading" id="CF1-tW-fV2"/>
+                                    <constraint firstAttribute="bottom" secondItem="UYP-CG-W3X" secondAttribute="bottom" id="hRE-xd-o6T"/>
+                                    <constraint firstAttribute="trailing" secondItem="UYP-CG-W3X" secondAttribute="trailing" id="iuv-B1-UlC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uL9-9W-IsH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zvp-FS-lgq" firstAttribute="top" secondItem="uL9-9W-IsH" secondAttribute="top" id="3wt-dB-8TR"/>
+                            <constraint firstItem="uL9-9W-IsH" firstAttribute="bottom" secondItem="Zvp-FS-lgq" secondAttribute="bottom" id="CIV-b9-55S"/>
+                            <constraint firstItem="uL9-9W-IsH" firstAttribute="trailing" secondItem="Zvp-FS-lgq" secondAttribute="trailing" id="nw0-jd-3yP"/>
+                            <constraint firstItem="Zvp-FS-lgq" firstAttribute="leading" secondItem="uL9-9W-IsH" secondAttribute="leading" id="xqd-GC-aPA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="r6N-Ym-Ciu"/>
+                    <connections>
+                        <outlet property="articleWebView" destination="UYP-CG-W3X" id="xEb-rh-Z2j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Rc-gi-f7i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2036" y="56"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="P7L-Zo-uhW">

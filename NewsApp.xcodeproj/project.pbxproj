@@ -23,6 +23,7 @@
 		ED89B51C283007F100978147 /* ConstantsUsedInProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89B51B283007F100978147 /* ConstantsUsedInProject.swift */; };
 		ED89B51E283008A800978147 /* NewsAPIJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89B51D283008A800978147 /* NewsAPIJSON.swift */; };
 		ED89B52028300B3100978147 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89B51F28300B3100978147 /* SpinnerViewController.swift */; };
+		ED89B52228300EFF00978147 /* DetailedArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89B52128300EFF00978147 /* DetailedArticleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		ED89B51B283007F100978147 /* ConstantsUsedInProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsUsedInProject.swift; sourceTree = "<group>"; };
 		ED89B51D283008A800978147 /* NewsAPIJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPIJSON.swift; sourceTree = "<group>"; };
 		ED89B51F28300B3100978147 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
+		ED89B52128300EFF00978147 /* DetailedArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedArticleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				ED89B4E22830033300978147 /* ViewController.swift */,
+				ED89B52128300EFF00978147 /* DetailedArticleViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				ED89B4DF2830033300978147 /* AppDelegate.swift in Sources */,
 				ED89B5152830041600978147 /* NewsTableViewCell.swift in Sources */,
 				ED89B4E92830033300978147 /* NewsApp.xcdatamodeld in Sources */,
+				ED89B52228300EFF00978147 /* DetailedArticleViewController.swift in Sources */,
 				ED89B51E283008A800978147 /* NewsAPIJSON.swift in Sources */,
 				ED89B4E12830033300978147 /* SceneDelegate.swift in Sources */,
 				ED89B52028300B3100978147 /* SpinnerViewController.swift in Sources */,
