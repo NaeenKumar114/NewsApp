@@ -22,6 +22,7 @@
 		ED89B5192830045200978147 /* ReuseIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89B5182830045200978147 /* ReuseIdentifiers.swift */; };
 		ED89B51C283007F100978147 /* ConstantsUsedInProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89B51B283007F100978147 /* ConstantsUsedInProject.swift */; };
 		ED89B51E283008A800978147 /* NewsAPIJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89B51D283008A800978147 /* NewsAPIJSON.swift */; };
+		ED89B52028300B3100978147 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89B51F28300B3100978147 /* SpinnerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		ED89B5182830045200978147 /* ReuseIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiers.swift; sourceTree = "<group>"; };
 		ED89B51B283007F100978147 /* ConstantsUsedInProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsUsedInProject.swift; sourceTree = "<group>"; };
 		ED89B51D283008A800978147 /* NewsAPIJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPIJSON.swift; sourceTree = "<group>"; };
+		ED89B51F28300B3100978147 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				ED89B5182830045200978147 /* ReuseIdentifiers.swift */,
 				ED89B51B283007F100978147 /* ConstantsUsedInProject.swift */,
 				ED89B51D283008A800978147 /* NewsAPIJSON.swift */,
+				ED89B51F28300B3100978147 /* SpinnerViewController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				ED89B4E92830033300978147 /* NewsApp.xcdatamodeld in Sources */,
 				ED89B51E283008A800978147 /* NewsAPIJSON.swift in Sources */,
 				ED89B4E12830033300978147 /* SceneDelegate.swift in Sources */,
+				ED89B52028300B3100978147 /* SpinnerViewController.swift in Sources */,
 				ED89B5192830045200978147 /* ReuseIdentifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

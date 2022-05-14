@@ -10,13 +10,38 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var newsTableView: UITableView!
     var techCrunchNewsData : NewsAPIJSON?
+    let loaderSpinView = SpinnerViewController()
+    var refreshControl = UIRefreshControl()
     override func viewDidLoad() {
         super.viewDidLoad()
         newsTableView.delegate = self
         newsTableView.dataSource = self
         newsTableView.register(UINib(nibName: reuseNibIdentifier.newsTableViewCell, bundle: nil), forCellReuseIdentifier: reuseCellIdentifier.newsTableViewCell)
+        createSpinnerView()
         makePostCallNewsData()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(self.refreshNewsData), for: .valueChanged)
+        newsTableView.addSubview(refreshControl)
+
     }
+    @objc func refreshNewsData() {
+        refreshControl.endRefreshing()
+        makePostCallNewsData()
+        createSpinnerView()
+    }
+    func createSpinnerView() {
+        addChild(loaderSpinView)
+        loaderSpinView.view.frame = view.frame
+        view.addSubview(loaderSpinView.view)
+        loaderSpinView.didMove(toParent: self)
+    }
+    func removeSpinnerView()
+    {
+        loaderSpinView.willMove(toParent: nil)
+        loaderSpinView.view.removeFromSuperview()
+        loaderSpinView.removeFromParent()
+    }
+
     func makePostCallNewsData() {
      
         let decoder = JSONDecoder()
@@ -31,15 +56,16 @@ class ViewController: UIViewController {
                 }
                 do {
                     let jsonResponse = try? decoder.decode(NewsAPIJSON.self, from: data!)
-                    let code_str = jsonResponse!.status
+                    let status = jsonResponse!.status
                     
                     DispatchQueue.main.async { [self] in
                         
-                        if code_str == "ok" {
+                        if status == "ok" {
                             techCrunchNewsData = jsonResponse
                             print(jsonResponse as Any)
                             techCrunchNewsData = jsonResponse
                             newsTableView.reloadData()
+                            removeSpinnerView()
                         }else   {
                             print(jsonResponse as Any)
                         }
