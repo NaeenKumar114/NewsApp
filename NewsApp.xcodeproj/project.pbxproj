@@ -20,6 +20,8 @@
 		ED89B5152830041600978147 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89B5132830041600978147 /* NewsTableViewCell.swift */; };
 		ED89B5162830041600978147 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED89B5142830041600978147 /* NewsTableViewCell.xib */; };
 		ED89B5192830045200978147 /* ReuseIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89B5182830045200978147 /* ReuseIdentifiers.swift */; };
+		ED89B51C283007F100978147 /* ConstantsUsedInProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89B51B283007F100978147 /* ConstantsUsedInProject.swift */; };
+		ED89B51E283008A800978147 /* NewsAPIJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89B51D283008A800978147 /* NewsAPIJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		ED89B5132830041600978147 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		ED89B5142830041600978147 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		ED89B5182830045200978147 /* ReuseIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiers.swift; sourceTree = "<group>"; };
+		ED89B51B283007F100978147 /* ConstantsUsedInProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsUsedInProject.swift; sourceTree = "<group>"; };
+		ED89B51D283008A800978147 /* NewsAPIJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPIJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				ED89B5182830045200978147 /* ReuseIdentifiers.swift */,
+				ED89B51B283007F100978147 /* ConstantsUsedInProject.swift */,
+				ED89B51D283008A800978147 /* NewsAPIJSON.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -303,10 +309,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED89B51C283007F100978147 /* ConstantsUsedInProject.swift in Sources */,
 				ED89B4E32830033300978147 /* ViewController.swift in Sources */,
 				ED89B4DF2830033300978147 /* AppDelegate.swift in Sources */,
 				ED89B5152830041600978147 /* NewsTableViewCell.swift in Sources */,
 				ED89B4E92830033300978147 /* NewsApp.xcdatamodeld in Sources */,
+				ED89B51E283008A800978147 /* NewsAPIJSON.swift in Sources */,
 				ED89B4E12830033300978147 /* SceneDelegate.swift in Sources */,
 				ED89B5192830045200978147 /* ReuseIdentifiers.swift in Sources */,
 			);
